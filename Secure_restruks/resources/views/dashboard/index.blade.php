@@ -3,14 +3,8 @@
 @section('content')
 <div class="space-y-6">
 
-  <!-- Tabs row (light purple chips) -->
-  <div class="grid grid-cols-4 gap-4">
-    @foreach(['Dashboard','POS Screen','Waiter Screen','Kitchen Panel'] as $tab)
-      <div class="rounded-2xl border border-brand-100 bg-brand-50 text-gray-800 dark:text-gray-200 px-4 py-3 text-center">
-        <p class="font-medium">{{ $tab }}</p>
-      </div>
-    @endforeach
-  </div>
+  <div class="h-4"></div>
+
 
   <div class="grid grid-cols-12 gap-6">
     <!-- Profile card -->
@@ -36,8 +30,8 @@
 
           @foreach($actions as [$label,$href,$chip])
             <a href="javascript:void(0)" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 border border-transparent hover:border-gray-200 dark:hover:border-gray-800">
-              <span class="w-6 h-6 rounded-full {{ $chip }} flex items-center justify-center">
-                <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="currentColor">
+              <span class="w-7 h-7 rounded-full {{ $chip }} flex items-center justify-center">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
                   @if($label==='Change Profile')
                     <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 7a7 7 0 0 1 14 0Z"/>
                   @elseif($label==='Change Password')
@@ -112,8 +106,9 @@
           <div class="flex items-center justify-between mt-4 text-sm text-gray-600 dark:text-gray-300">
             <span>Showing 0 to 0 of 0 entries</span>
             <div class="flex gap-2">
-              <button class="px-3 h-9 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-500" disabled>Previous</button>
-              <button class="px-3 h-9 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-500" disabled>Next</button>
+              <button class="px-3 h-9 rounded-lg border border-gray-300 bg-gray-100 text-gray-500" disabled>Previous</button>
+<button class="px-3 h-9 rounded-lg border border-gray-300 bg-gray-100 text-gray-500" disabled>Next</button>
+
             </div>
           </div>
         </div>
