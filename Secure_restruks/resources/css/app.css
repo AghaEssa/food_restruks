@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar on the LEFT sidebar only will appear due to overflow-y classes.
+   Global tweaks for a clean look similar to your screenshots */
+html, body { height: 100%; }
